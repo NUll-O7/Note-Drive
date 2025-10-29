@@ -1,11 +1,14 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import api from "../lib/axios";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import api from "../lib/axios.js";
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +29,7 @@ const CreatePage = () => {
       navigate("/");
     } catch (error) {
       console.log("Error creating note", error);
-      if (error.response.status === 429) {
+      if (error.response && error.response.status === 429) {
         toast.error("Slow down! You're creating notes too fast", {
           duration: 4000,
           icon: "💀",
@@ -86,7 +89,7 @@ const CreatePage = () => {
                   CREATE NEW NOTE
                 </h2>
 
-                <div className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-cyan-400 font-bold tracking-wider mb-2 text-sm uppercase">
                       Title
@@ -114,6 +117,7 @@ const CreatePage = () => {
 
                   <div className="flex justify-end pt-4">
                     <button
+                      type="submit"
                       onClick={handleSubmit}
                       disabled={loading}
                       className="relative group px-8 py-3 font-bold tracking-widest text-white uppercase overflow-hidden rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
@@ -130,7 +134,7 @@ const CreatePage = () => {
                       </span>
                     </button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

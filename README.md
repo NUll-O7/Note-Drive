@@ -14,7 +14,7 @@
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.1.16-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Demo](https://note-drive-tble.onrender.com) • [Report Bug](https://github.com/yourusername/notedrive/issues) • [Request Feature](https://github.com/yourusername/notedrive/issues)
+[Link](https://note-drive.netlify.app/) • [Report Bug](https://github.com/yourusername/notedrive/issues) • [Request Feature](https://github.com/yourusername/notedrive/issues)
 
 </div>
 

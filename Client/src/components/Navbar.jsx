@@ -1,8 +1,6 @@
 import { Link } from "react-router";
 import { PlusIcon } from "lucide-react";
 
-import { ThemeToggle } from "./ThemeToggle";
-
 const Navbar = () => {
 
   return (
@@ -19,7 +17,6 @@ const Navbar = () => {
               </h1>
               <div className="h-0.5 bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </Link>
-            <ThemeToggle />
             <div className="flex items-center gap-4">
               <Link
                 to="/create"

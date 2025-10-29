@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import NoteDetailPage from "./pages/NoteDetailPage.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { FloatingThemeToggle } from "./components/FloatingThemeToggle.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/create" element={<CreatePage />} />
         <Route path="/note/:id" element={<NoteDetailPage />} />
       </Routes>
+      <FloatingThemeToggle />
     </div>
     </ThemeProvider>
   );

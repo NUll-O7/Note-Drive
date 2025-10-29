@@ -1,11 +1,11 @@
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "../context/ThemeContext.jsx";
 
-export const ThemeToggle = () => {
+export const FloatingThemeToggle = () => {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <div className="relative">
+    <div className="fixed bottom-6 right-6 z-50">
       <style>{`
         @keyframes orbitSun {
           0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
@@ -15,17 +15,24 @@ export const ThemeToggle = () => {
           0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
           100% { transform: rotate(-360deg) translateX(20px) rotate(360deg); }
         }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
         .neon-toggle {
           box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, inset 0 0 10px rgba(0,0,0,0.3);
+        }
+        .floating-button {
+          animation: float 3s ease-in-out infinite;
         }
       `}</style>
 
       <button
         onClick={toggleTheme}
-        className={`group relative p-3 rounded-xl border-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
+        className={`floating-button group relative p-3 rounded-xl border-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
           isDark 
-            ? 'bg-black/60 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10' 
-            : 'bg-white/80 border-yellow-400 text-yellow-500 hover:bg-yellow-400/10'
+            ? 'bg-black/60 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 hover:scale-110' 
+            : 'bg-white/80 border-yellow-400 text-yellow-500 hover:bg-yellow-400/10 hover:scale-110'
         } neon-toggle`}
         aria-label="Toggle theme"
       >

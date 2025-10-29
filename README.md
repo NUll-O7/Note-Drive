@@ -74,19 +74,19 @@
 <div align="center">
 
 ### 🌙 Dark Mode
-![Dark Mode Home](.github/screenshots/dark-home.png)
+![Dark Mode Home](.github/screenshots/Dark-HomePage.png)
 *Cyberpunk-inspired dark theme with neon accents*
 
 ### ☀️ Light Mode
-![Light Mode Home](.github/screenshots/light-home.png)
+![Light Mode Home](.github/screenshots/Light_HomePage.png)
 *Clean and modern light theme*
 
 ### ✏️ Create Note
-![Create Note](.github/screenshots/create-note.png)
+![Create Note](.github/screenshots/CreatePage.png)
 *Beautiful note creation form with animated background*
 
 ### 📄 Note Detail
-![Note Detail](.github/screenshots/note-detail.png)
+![Note Detail](.github/screenshots/NoteDetail.png)
 *Edit notes with real-time updates*
 
 </div>

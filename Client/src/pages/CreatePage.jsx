@@ -118,7 +118,6 @@ const CreatePage = () => {
                   <div className="flex justify-end pt-4">
                     <button
                       type="submit"
-                      onClick={handleSubmit}
                       disabled={loading}
                       className="relative group px-8 py-3 font-bold tracking-widest text-white uppercase overflow-hidden rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
